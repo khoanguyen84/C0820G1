@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <script src="index.js">
+    </script>
+</head>
+
+<body>
+    <!-- <button id="btnDisplay" onclick="displayDateTime()">Click on to display date and time</button>
+    <button onclick="this.innerHTML = Date()">Click on to display date and time</button>
+    <label id="lbDisplay">Date and Time</label> -->
+
+    <input type="text" onkeypress="document.getElementById('copy').value = this.value;">
+    <br>
+    <input type="text" id="copy">
+    <br>
+
+    <img id="light" src="images/off.png">
+    <button onclick="controllLight()">
+        <img src="images/switchon.png" id="switch" style="width:100px; height:40px;">
+    </button>
+
+    <br>
+    <select id="classes" onchange="changeClass()">
+        <option value="0">JAVA</option>
+        <option value="1">NET CORE</option>
+        <option value="2">PHP/Laravel</option>
+    </select>
+    <br>
+    <input id="choice">
+    <br>
+    <button onmouseover="this.innerHTML = Date()" onmouseout="this.innerHTML='Click on to display date and time'">Click on to display date and time</button>
+</body>
+
+</html>
+
+<script>
+    function changeClass() {
+        var selectItem = document.getElementById("classes").value;
+        document.getElementById("choice").value =
+            (document.getElementById('classes').options[selectItem].text);
+    }
+</script>

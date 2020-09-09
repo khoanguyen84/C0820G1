@@ -1,0 +1,117 @@
+<html>
+
+<head></head>
+
+<body>
+    <!-- 
+        method: GET/POST
+        action : đường dẫn/ URL
+        inputs
+        label
+        select -> options
+        textarea
+        buttons
+     -->
+    <form action="about.html" method="GET">
+        <table border="1">
+            <caption>Registration Form</caption>
+            <tbody>
+                <input type="hidden" name="securitycode" value="c0820h1">
+                <tr>
+                    <td>
+                        <label>Enter your firstname</label>
+                    </td>
+                    <td>
+                        <input type="text" id="fn" name="fn" placeholder="enter your firstname" autocomplete="off">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="">Enter your lastname</label></td>
+                    <td><input type="text" name="ln" placeholder="enter your lastname"></td>
+                </tr>
+                <tr>
+                    <td>Enter you password</td>
+                    <td>
+                        <input type="password" name="pw" placeholder="enter your password">
+                    </td>
+                </tr>
+                <tr>
+                    <td>ReEnter your password</td>
+                    <td>
+                        <input type="password" placeholder="re-enter your password">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>
+                        <input type="email" name="email" placeholder="email" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Enter your mobile</td>
+                    <td>
+                        <input type="tel" name="mobile" placeholder="mobile" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Enter your address</td>
+                    <td>
+                        <textarea cols="30" rows="10" name="address"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Select your gender</td>
+                    <td>
+                        <input type="radio" name="gender" checked> male
+                        <input type="radio" name="gender"> female
+                    </td>
+                </tr>
+                <tr>
+                    <td>Select your hobbies</td>
+                    <td>
+                        hobby 1 <input type="checkbox" checked> <br> hobby 2 <input type="checkbox"> <br> hobby 3 <input type="checkbox">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Select your Dob</td>
+                    <td>
+                        <input type="date" name="dob" min="2019-12-31" max="2020-09-30">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Select your country</td>
+                    <td>
+                        <select>
+                            <option value="0" selected disabled>Select your county</option>
+                            <option value="1">Việt Nam</option>
+                            <option value="2">Thái Lan</option>
+                            <option value="3">Hàn Quốc</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Upload your avatar</td>
+                    <td><input type="file" accept="image/*"></td>
+                </tr>
+                <tr>
+                    <td>
+                        Select your color
+                    </td>
+                    <td>
+                        <input type="color">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit">Save</button>
+                        <!-- <button type="reset">Cancel</button> -->
+                        <input type="reset" value="Cancel">
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+
+</html>

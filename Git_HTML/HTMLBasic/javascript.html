@@ -1,0 +1,47 @@
+<html>
+
+<head></head>
+
+<body>
+    <input type="button" value="Click me to dispay date and time" onclick="document.getElementById('display').innerHTML = Date();">
+    <label id="display"></label>
+
+    <input type="text" onkeydown="document.getElementById('lb2').innerHTML = this.value;">
+    <label id="lb2"></label>
+
+    <select id="country" onchange="alert(this.options[this.value-1].text)">
+        <option value="1">Việt Nam</option>
+        <option value="2">Thái Lan</option>
+    </select>
+
+    <label onmouseover="this.innerHTML = Date()" onmouseout="this.innerHTML = 'hover to display date and time'">hover to display date and time</label>
+    <!-- <br>
+    <input type="button" value="open the eye" onclick="document.getElementById('eye').src = 'images/open.png'">
+    <img src="images/close.png" id="eye">
+    <input type="button" value="close the eye" onclick="document.getElementById('eye').src = 'images/close.png'"> -->
+
+    <br>
+    <input type="image" id="switch" src="images/switchon.png" style="width:100px; height: 40px;" onclick="controllLight()">
+    <img src="images/off.png" id="light">
+</body>
+
+</html>
+<script>
+    function displayDateTime() {
+        document.getElementById("display").innerHTML = Date();
+    }
+
+    var isOn = true;
+
+    function controllLight() {
+        if (isOn) {
+            document.getElementById('switch').src = "images/switchoff.png";
+            document.getElementById('light').src = 'images/on.png';
+
+        } else {
+            document.getElementById('switch').src = "images/switchon.png";
+            document.getElementById('light').src = 'images/off.png';
+        }
+        isOn = !isOn;
+    }
+</script>

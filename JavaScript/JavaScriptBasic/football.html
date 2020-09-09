@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="init()">
+    <img src="images/right.jpg" id="ball" alt="">
+    <!-- <br>
+    <input type="button" onclick="moveBall()" value="Click to move ball"> -->
+</body>
+
+<script>
+    function init() {
+        var car = document.getElementById("ball");
+        car.style.position = "relative";
+        car.style.width = "200px";
+        car.style.height = "100px";
+        car.style.left = "0";
+        car.style.top = "0";
+
+        window.addEventListener("keydown", keyPressed);
+    }
+
+    function moveBall() {
+        var ball = document.getElementById("ball")
+        ball.style.left = parseInt(ball.style.left) + 10 + "px";
+    }
+
+    function upArrowPressed() {
+        var ball = document.getElementById("ball");
+        ball.src = "images/up.jpg";
+        ball.style.width = "100px";
+        ball.style.height = "200px";
+        var heightBall = parseInt(ball.height);
+        if (parseInt(ball.style.top) > 0) {
+            ball.style.top = parseInt(ball.style.top) - 10 + "px";
+        } else {
+            ball.style.top = 0;
+        }
+    }
+
+    function downArrowPressed() {
+        var ball = document.getElementById("ball");
+        ball.src = "images/down.jpg";
+        ball.style.width = "100px";
+        ball.style.height = "200px";
+        var heightBall = parseInt(ball.style.height);
+        if (parseInt(ball.style.top) + heightBall < window.innerHeight - 10) {
+            ball.style.top = parseInt(ball.style.top) + 10 + "px";
+        } else {
+            ball.style.top = parseInt(ball.style.top) + heightBall;
+        }
+    }
+
+    function rightArrowPressed() {
+        var ball = document.getElementById("ball");
+        ball.src = "images/right.jpg";
+        ball.style.width = "200px";
+        ball.style.height = "100px";
+        var widthBall = parseInt(ball.style.width);
+        if (parseInt(ball.style.left) + widthBall < window.innerWidth - 10) {
+            ball.style.left = parseInt(ball.style.left) + 10 + "px";
+        } else {
+            ball.style.left = parseInt(ball.styleleft) + widthBall;
+        }
+    }
+
+    function leftArrowPressed() {
+        var ball = document.getElementById("ball");
+        ball.src = "images/left.jpg";
+        ball.style.width = "200px";
+        ball.style.height = "100px";
+        var widthBall = parseInt(ball.style.width);
+        if (parseInt(ball.style.left) > 0) {
+            ball.style.left = parseInt(ball.style.left) - 10 + "px";
+        } else {
+            ball.style.left = 0;
+        }
+    }
+
+    function keyPressed(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                {
+                    //move left: 37
+                    leftArrowPressed();
+                    break;
+                }
+            case 39:
+                {
+                    rightArrowPressed();
+                    //move right: 39
+                    break;
+                }
+            case 38:
+                {
+                    //move up: 38
+                    upArrowPressed();
+                    break;
+                }
+            case 40:
+                {
+                    //move down: 40
+                    downArrowPressed();
+                    break;
+                }
+        }
+    }
+</script>
+
+</html>

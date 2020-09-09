@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        table {
+            padding: 10px;
+            background-color: indianred;
+            border-radius: 5px;
+            margin: 0px auto;
+            width: 350px;
+            text-align: center;
+        }
+        
+        button {
+            padding: 15px;
+            margin: 10px;
+        }
+        
+        input {
+            padding: 10px;
+            width: 80%;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td colspan="4">
+                <input type="text" id="textbox">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="buttonClick(this.value)" value="1">1</button>
+                <button onclick="buttonClick(this.value)" value="2">2</button>
+                <button onclick="buttonClick(this.value)" value="3">3</button>
+                <button onclick="operandClick(this.value)" value="+">+</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="buttonClick(this.value)" value="4">4</button>
+                <button onclick="buttonClick(this.value)" value="5">5</button>
+                <button onclick="buttonClick(this.value)" value="6">6</button>
+                <button onclick="operandClick(this.value)" value="-">-</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="buttonClick(this.value)" value="7">7</button>
+                <button onclick="buttonClick(this.value)" value="8">8</button>
+                <button onclick="buttonClick(this.value)" value="9">9</button>
+                <button onclick="operandClick(this.value)" value="x">x</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="operandClick(this.value)" value="c">C</button>
+                <button onclick="buttonClick(this.value)" value="0">0</button>
+                <button onclick="operandClick(this.value)" value="=">=</button>
+                <button onclick="operandClick(this.value)" value=":">:</button>
+            </td>
+        </tr>
+    </table>
+</body>
+<script>
+    var textbox = document.getElementById("textbox");
+
+    function buttonClick(v) {
+        textbox.value += v;
+    }
+
+    function operandClick(v) {
+        if (v == "=") {
+            textbox.value += "=" + eval(textbox.value);
+        } else if (v == "c") {
+            textbox.value = "";
+        } else {
+            textbox.value += v;
+        }
+    }
+</script>
+
+</html>

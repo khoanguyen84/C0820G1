@@ -1,0 +1,138 @@
+<html>
+
+<head>
+    <style>
+        body {
+            font-size: 100%;
+        }
+        
+        .td {
+            font-size: 30px;
+            font-weight: bolder;
+            color: red;
+        }
+        
+        .sub {
+            font-size: 20px;
+            color: black;
+        }
+        
+        #chesse {
+            width: 200px;
+            height: 200px;
+            border-collapse: collapse;
+        }
+        
+        .odd {
+            background-color: white;
+        }
+        
+        .even {
+            background-color: black;
+        }
+        
+        .border {
+            background-color: tomato;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <img src="https://james.codegym.vn/pluginfile.php/1/theme_remui/logo/1598417260/Codegym%20X.png" alt="">
+    <input type="image" src=https://james.codegym.vn/pluginfile.php/1/theme_remui/logo/1598417260/Codegym%20X.png "> -->
+    <h1>About Page</h1>
+    <a href="index.html ">Back to Home page</a>
+    <br> Security Code
+    <h1 id="sc "></h1>
+    <br> your submit
+    <h3 id="fn "></h3>
+    <h3 id="ln "></h3>
+    <h3 id="info "></h3>
+    <input type="month">
+    <input type="number">
+    <input type="range" min="0" min="10">
+    <input type="search">
+    <input type="time">
+    <input type="week">
+
+    <table border="1">
+        <tr>
+            <td class="td">4<sub class="sub">16</sub> </td>
+            <td>
+                x <sup>2</sup>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+
+    <table id="chesse">
+        <tr>
+            <td class="border">&nbsp;</td>
+            <td class="border">1</td>
+            <td class="border">2</td>
+            <td class="border">3</td>
+            <td class="border">4</td>
+            <td class="border">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="border">A</td>
+            <td class="odd"></td>
+            <td class="even"></td>
+            <td class="odd"></td>
+            <td class="even"></td>
+            <td class="border">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="border">B</td>
+            <td class="even"></td>
+            <td class="odd"></td>
+            <td class="even"></td>
+            <td class="odd"></td>
+            <td class="border">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="border">C</td>
+            <td class="odd"></td>
+            <td class="even"></td>
+            <td class="odd"></td>
+            <td class="even"></td>
+            <td class="border">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="border">D</td>
+            <td class="even"></td>
+            <td class="odd"></td>
+            <td class="even"></td>
+            <td class="odd"></td>
+            <td class="border">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="border">&nbsp;</td>
+            <td class="border">&nbsp;</td>
+            <td class="border">&nbsp;</td>
+            <td class="border">&nbsp;</td>
+            <td class="border">&nbsp;</td>
+            <td class="border">&nbsp;</td>
+        </tr>
+    </table>
+</body>
+
+<script>
+    var link = window.location.href;
+    var url = new URL(link);
+    document.getElementById("sc ").innerHTML = `Security Code: ${url.searchParams.get("securitycode ")}`
+        // document.getElementById("fn ").innerHTML = `Firstname: ${url.searchParams.get("fn ")}`;
+        // document.getElementById("ln ").innerHTML = `Firstname: ${url.searchParams.get("ln ")}`;
+    document.getElementById("fn ").innerHTML = 'Firstname:' + url.searchParams.get("fn ");
+    document.getElementById("ln ").innerHTML = 'Firstname:' + url.searchParams.get("ln ");
+    document.getElementById("info ").innerHTML = `Password: ${url.searchParams.get("pw ")} <br> 
+                                                Email: ${url.searchParams.get("email ")} <br>
+                                                Mobile: ${url.searchParams.get("mobile ")}`;
+</script>
+
+</html>

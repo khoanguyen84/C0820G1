@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            background-color: tomato;
+            padding: 10px;
+            width: 100px;
+            height: 100px;
+            border-radius: 5px;
+        }
+        
+        button {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body onload="init()">
+    <img id="ball" on="" src="images/right.jpg">
+
+    <!-- <br>
+    <input type="button" value="click to move the ball" onclick="controllBall()"> -->
+    <table style="position: fixed; left: 0px; top:200px; display: none;">
+        <tr>
+            <td></td>
+            <td><button onclick="moveToUp()">&#8593;</button></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><button onclick="moveToLeft()">&#8592;</button></td>
+            <td></td>
+            <td><button onclick="moveToRight()">&#8594;</button></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button onclick="moveToBottom()">&#8595;</button></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+
+<script>
+    var tran = "";
+
+    function init() {
+        var ball = document.getElementById("ball");
+        ball.style.width = "200px";
+        ball.style.height = "100px";
+        ball.style.position = "relative";
+        ball.style.left = "0";
+        ball.style.top = "0";
+
+        window.addEventListener("keydown", controllBall)
+    }
+
+    function moveToRight() {
+        var ball = document.getElementById("ball");
+        ball.src = "images/right.jpg";
+        ball.style.width = "200px";
+        ball.style.height = "100px";
+        var ballWidth = parseInt(ball.style.width);
+        if ((parseInt(ball.style.left) + ballWidth + 10) < window.innerWidth) {
+            ball.style.left = parseInt(ball.style.left) + 10 + "px";
+        } else {
+            ball.style.left = window.innerWidth - ballWidth - 10 + "px";
+        }
+
+    }
+
+    function moveToLeft() {
+        var ball = document.getElementById("ball");
+        ball.src = "images/left.jpg";
+        ball.style.width = "200px";
+        ball.style.height = "100px";
+        if (parseInt(ball.style.left) > 0) {
+            ball.style.left = parseInt(ball.style.left) - 10 + "px";
+        } else {
+            ball.style.left = "0px";
+        }
+
+    }
+
+    function moveToBottom() {
+        var ball = document.getElementById("ball");
+        var ballHeight = parseInt(ball.style.height);
+        ball.src = "images/down.jpg";
+        ball.style.width = "100px";
+        ball.style.height = "200px";
+        if ((parseInt(ball.style.top) + ballHeight + 10) < window.innerHeight) {
+            ball.style.top = parseInt(ball.style.top) + 10 + "px";
+        } else {
+            ball.style.top = window.innerHeight - ballHeight - 10 + "px";
+        }
+    }
+
+    function moveToUp() {
+        var ball = document.getElementById("ball");
+        ball.src = "images/up.jpg";
+        ball.style.width = "100px";
+        ball.style.height = "200px";
+        if (parseInt(ball.style.top) > 0) {
+            ball.style.top = parseInt(ball.style.top) - 10 + "px";
+        } else {
+            ball.style.top = "0px";
+        }
+    }
+
+    function controllBall(evt) {
+        switch (evt.keyCode) {
+            case 39:
+                {
+                    //right: 39
+                    moveToRight();
+                    break;
+                }
+            case 37:
+                {
+                    //left: 37
+                    moveToLeft();
+                    break;
+                }
+            case 38:
+                {
+                    //up: 38
+                    moveToUp();
+                    break;
+                }
+            case 40:
+                {
+                    //down: 40
+                    moveToBottom();
+                    break;
+                }
+            default:
+                {
+                    window.alert("please use these arrows button to controll the ball.")
+                }
+        }
+    }
+</script>
+
+</html>
