@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var str = "CodeGym-Hue";
+        document.write("kết quả khi sử dụng for-in <br>");
+        for (var c in str) {
+            document.write(`${str[c]}, `);
+        }
+        document.write("<br>");
+        document.write("kết quả khi sử dụng for-of <br>");
+        for (var c of str) {
+            document.write(`${c}, `);
+        }
+        document.write("<br>");
+        document.write("kết quả khi sử dụng for-each <br>");
+        str.split('').forEach(function(v, i) {
+            document.write(`${v}, `);
+        });
+        document.write("<br>");
+        document.write("kết quả khi sử dụng white <br>");
+        var i = 0;
+        while (i < str.length) {
+            document.write(`${str[i]}, `);
+            i++;
+        }
+        document.write("<br>");
+        document.write("kết quả khi sử dụng do-white <br>");
+        var j = 0;
+        do {
+            document.write(`${str[j]}, `);
+            j++;
+        }
+        while (j < str.length)
+    </script>
+</body>
+
+</html>

@@ -45,8 +45,6 @@
 </body>
 
 <script>
-    var tran = "";
-
     function init() {
         var ball = document.getElementById("ball");
         ball.style.width = "200px";
@@ -55,7 +53,7 @@
         ball.style.left = "0";
         ball.style.top = "0";
 
-        window.addEventListener("keydown", controllBall)
+        window.addEventListener("keydown", controllBall);
     }
 
     function moveToRight() {
@@ -138,7 +136,7 @@
                 }
             default:
                 {
-                    window.alert("please use these arrows button to controll the ball.")
+                    window.alert("please use these arrows button to control the ball.")
                 }
         }
     }
