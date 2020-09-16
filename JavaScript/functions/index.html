@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="show"></p>
+    <script>
+        let number1 = 5;
+        let number2 = 7;
+
+        function sum(n1, n2) {
+            // document.write(`5 + 7 = ${5+7}`);
+            n1 += 2;
+            return n1 + n2;
+        }
+        document.write(`<br>n1: ${number1} n2:${number2}<br>`)
+
+        document.write(`doc: 5 + 7 = ${sum(number1, number2)}`);
+        document.write(`doc: 15 + 17 = ${sum(15, 17)}`);
+        document.write(`doc: 25 + 27 = ${sum(25, 27)}`);
+        document.getElementById("show").innerHTML = `p: 5 + 7 = ${sum(number1,number2)}`;
+        document.write(`<br>n1: ${number1} n2:${number2}<br>`)
+    </script>
+</body>
+
+</html>

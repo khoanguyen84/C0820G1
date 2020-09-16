@@ -39,6 +39,82 @@
             j++;
         }
         while (j < str.length)
+        document.write("<br>");
+        var show = "";
+        for (let i = 1; i <= 6; i++) {
+            for (let j = 1; j <= 6; j++) {
+                if (j <= i) {
+                    show += `*`;
+                } else {
+                    show += "&nbsp;&nbsp;";
+                }
+            }
+            show += `<br>`;
+        }
+        document.write(show);
+        document.write("<br>");
+        show = "";
+        for (let i = 1; i <= 6; i++) {
+            for (let j = 1; j <= 6; j++) {
+                if (j >= i) {
+                    show += `*`;
+                }
+            }
+            show += `<br>`;
+        }
+        document.write(show);
+        document.write("<br>");
+        show = "";
+        for (let i = 1; i <= 6; i++) {
+            for (let j = 1; j <= 6; j++) {
+                if (j > 6 - i) {
+                    show += `*`;
+                } else {
+                    show += "&nbsp;&nbsp;";
+                }
+            }
+            show += `<br>`;
+        }
+        document.write(show);
+        document.write("<br>");
+        show = "";
+        for (let i = 1; i <= 6; i++) {
+            for (let j = 1; j <= 6; j++) {
+                if (j >= i) {
+                    show += `*`;
+                } else {
+                    show += "&nbsp;&nbsp;";;
+                }
+            }
+            show += `<br>`;
+        }
+        document.write(show);
+        document.write("<br>");
+        show = "";
+        for (let i = 1; i <= 6; i++) {
+            for (let j = 1; j <= 6; j++) {
+                if (i == 1 || j == 1 || i == 6 || j == 6) {
+                    show += `*`;
+                } else {
+                    show += "&nbsp;&nbsp;";;
+                }
+            }
+            show += `<br>`;
+        }
+        document.write(show);
+        document.write("<br>");
+        show = "";
+        for (let i = 1; i <= 7; i++) {
+            for (let j = 1; j <= (7 - i); j++) {
+                show += "&nbsp;&nbsp;";
+            }
+            for (let k = 1; k <= 2 * i - 1; k++) {
+                show += `*`;
+            }
+            show += `<br>`;
+        }
+        document.write(show);
+    </script>
     </script>
 </body>
 

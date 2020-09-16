@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let a = [];
+        // let a0 = [1, 2, 3];
+        // let a1 = [1, 2, 3];
+        // let a2 = [1, 2, 3];
+        // a[0] = a0;
+        // a[1] = a1;
+        // a[2] = a2;
+
+        // document.write(a.join(','));
+
+        // let B = new Array();
+        // let B0 = new Array(1, 2, 3);
+        // let B1 = new Array(1, 2, 3);
+        // let B2 = Array(1, 2, 3);
+        // B[0] = B0;
+        // B[1] = B1;
+        // B[2] = B2;
+
+
+        // let A = [];
+        // let row = 10;
+        // let col = 10;
+        // let rnd = 0;
+        // for (let i = 0; i < row; i++) {
+        //     let B = [];
+        //     for (let j = 0; j < col; j++) {
+
+        //         do{
+        //             rnd = Math.floor(Math.random() * 90 + 20);    
+        //         }
+        //         while(isExist(rnd, A))
+        //         B[j] = rnd;
+
+        //     }
+        //     A[i] = B;
+        // }
+
+        //Math.floor(Math.Ramdom*(end-start) + start)
+
+
+        let A = [3, 2, 2, 7, 8, 4, 7];
+        document.write("<br>PUSH - POP<br>");
+        print(A);
+        A.push(11, 13, 15);
+        print(A);
+        A.pop();
+        print(A);
+
+        let B = [3, 2, 5, 7, 8, 4, 7];
+        document.write("<br>UNSHIFT - SHIFT<br>");
+        print(B);
+        B.unshift(11, 13, 15);
+        print(B);
+        B.shift();
+        print(B);
+
+        B = [3, 2, 5, 7, 8, 4, 7];
+        document.write("<br>REVEISE<br>");
+        print(B);
+        print(B.reverse());
+
+        document.write("<br>CONCAT<br>");
+        print(A);
+        print(B);
+        print(A.concat(B));
+
+        document.write("<br>JOIN<br>");
+        print(A);
+        document.write(A.join('-'));
+
+        document.write("<br>SORT<br>");
+        print(A);
+        A.sort(function(a, b) {
+            return b - a;
+        });
+        print(A);
+
+        document.write("<br>INDEXOF<br>");
+        print(A);
+        document.write(A.indexOf(2));
+
+        document.write("<br>MAP<br>");
+        print(A);
+        let AA = A.map(function(n) {
+            return n * 2;
+        });
+        print(AA);
+
+
+
+
+        function print(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                document.write(`${arr[i]} `);
+            }
+            document.write("<br>");
+        }
+
+        function printA() {
+            for (let i = 0; i < A.length; i++) {
+                document.write(`${A[i]} `);
+            }
+            document.write("<br>");
+        }
+
+        function printB() {
+            for (let i = 0; i < B.length; i++) {
+                document.write(`${B[i]} `);
+            }
+            document.write("<br>");
+        }
+    </script>
+</body>
+
+</html>

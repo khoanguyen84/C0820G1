@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* table,
+        td {
+            border: 1px solid red;
+            border-collapse: collapse;
+            padding: 5px;
+        } */
+    </style>
+</head>
+
+<body>
+    <div id="tb">
+
+    </div>
+</body>
+<script>
+    let row = 10;
+    let col = 10;
+    // let tb = "<table>";
+    // for (let i = 1; i <= row; i++) {
+    //     tb += "<tr>";
+    //     for (let j = 1; j <= col; j++) {
+    //         // if (j <= i) {
+    //         //     tb += `<td>*</td>`;
+    //         // } else {
+    //         //     tb += `<td></td>`;
+    //         // }
+
+    //         tb += `<td>${(j<=i?'*':' ')}</td>`;
+
+    //         // tb += "<td>" + (j < i ? '*' : ' ') + "</td>";
+    //     }
+    //     tb += "</tr>";
+    // }
+    // tb += "</table>";
+    // document.write(tb);
+
+    // let show = "";
+    // for (let i = 1; i <= row; i++) {
+    //     for (let j = 1; j <= col; j++) {
+    //         show += `${(j<=i?'*':' ')}`;
+    //     }
+    //     show += "<br>";
+    // }
+    // document.write(show);
+
+    document.write("<br>");
+    show = "";
+    for (let i = 1; i <= row; i++) {
+        for (let j = 1; j <= col; j++) {
+            if (j <= (row - i)) {
+                show += "&nbsp;&nbsp;";
+            }
+        }
+        for (let k = 1; k <= 2 * i - 1; k++) {
+            show += "*";
+        }
+        show += "<br>";
+    }
+    document.write(show);
+</script>
+
+</html>

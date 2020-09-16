@@ -9,68 +9,123 @@
 
 <body>
     <script>
-        for (let i = 0; i < 10; i++) {
-            document.write(`${i + 1} ,`);
-        }
-        document.write("<br>");
-        for (let i = 0; i < 10; i++) {
-            document.write(`${10 - i} ,`);
-        }
-        document.write("<br>");
-        for (let i = 0; i < 10; i++) {
-            if (i % 2 == 1) {
-                document.write(`${i} ,`);
-            }
-        }
-        document.write("<br>");
-        for (let i = 0; i < 10; i = i + 2) {
-            document.write(`${i+1} ,`);
-        }
-        document.write("<br>Dùng FOR<br>");
-        for (let i = 5; i <= 100; i += 5) {
-            document.write(`${i} ,`);
+        // for (let i = 0; i < 10; i++) {
+        //     document.write(`${i + 1} ,`);
+        // }
+        // document.write("<br>");
+        // for (let i = 0; i < 10; i++) {
+        //     document.write(`${10 - i} ,`);
+        // }
+        // document.write("<br>");
+        // for (let i = 0; i < 10; i++) {
+        //     if (i % 2 == 1) {
+        //         document.write(`${i} ,`);
+        //     }
+        // }
+        // document.write("<br>");
+        // for (let i = 0; i < 10; i = i + 2) {
+        //     document.write(`${i+1} ,`);
+        // }
+        // document.write("<br>Dùng FOR<br>");
+        // for (let i = 5; i <= 100; i += 5) {
+        //     document.write(`${i} ,`);
+        // }
+
+        // document.write("<br>Dùng WHILE<br>");
+        // let i = 0;
+        // while (i <= 95) {
+        //     // i++;
+        //     document.write(`${i+=5} ,`);
+        // }
+
+        // document.write("<br>Dùng DO .. WHILE<br>");
+        // i = 0;
+        // do {
+        //     // i++;
+        //     document.write(`${i+=5} ,`);
+        // }
+        // while (i <= 95)
+
+        // document.write("<br>in các số từ 0 đến 55<br>");
+        // let flat = true;
+        // for (let i = 0; i < 100 && flat; i++) {
+        //     if (i != 0 && i % 55 == 0) {
+        //         flat = false;
+        //     }
+        //     document.write(`${i} ,`);
+        // }
+
+        // document.write("<br>in các số từ 0 đến 55 sử dụng break<br>");
+
+        // for (let i = 0; i < 100; i++) {
+        //     if (i != 0 && i % 56 == 0) {
+        //         break;
+        //     }
+        //     document.write(`${i} ,`);
+        // }
+
+        // document.write("<br>Hiển thị các số chẵn dùng continue<br>");
+        // for (let i = 0; i < 10; i++) {
+        //     if (i % 2 == 1) {
+        //         continue;
+        //     }
+        //     document.write(`${i} ,`);
+        // }
+
+        // document.write("<br>");
+
+        // let a = 0;
+        // let b = 0;
+
+        // a = parseInt(prompt('input a: '));
+        // let flat = Number.isInteger(a);
+        // for (let i = 0; !flat && i < 10; i++) {
+        //     a = parseInt(prompt('input a: '));
+        //     flat = Number.isInteger(a);
+        // }
+
+        // a = parseInt(prompt('input a: '));
+        // while (!Number.isInteger(a)) {
+        //     a = parseInt(prompt('input a: '));
+        // }
+
+        // do {
+        //     a = parseInt(prompt('input a: '));
+        // }
+        // while (!Number.isInteger(a))
+
+        // do {
+        //     b = parseInt(prompt('input b: '));
+        // }
+        // while (!Number.isInteger(b))
+
+        // if (a % b == 0) {
+        //     document.write(`${a} chia hết cho ${b}`);
+        // } else {
+        //     document.write(`${a} không chia hết cho ${b}`);
+        // }
+
+        let str = "CodeGym Hue C0820H1";
+        document.write("<br>Dùng FOR IN<br>");
+        for (var c in str) {
+            document.write(`${str[c]}-`);
         }
 
-        document.write("<br>Dùng WHILE<br>");
-        let i = 0;
-        while (i <= 95) {
-            // i++;
-            document.write(`${i+=5} ,`);
+        document.write("<br>Dùng FOR OF<br>");
+        for (var c of str) {
+            // document.write(`${str.indexOf(c)}-`);
+            document.write(`${c}-`);
+            // document.write(c + '-');
         }
 
-        document.write("<br>Dùng DO .. WHILE<br>");
-        i = 0;
-        do {
-            // i++;
-            document.write(`${i+=5} ,`);
-        }
-        while (i <= 95)
+        document.write("<br>Dùng FOR EACH<br>");
+        //i ~ index
+        //v ~ value
+        str.split('').forEach(function(v, i) {
+            document.write(`${v}-`);
+        });
 
-        document.write("<br>in các số từ 0 đến 55<br>");
-        let flat = true;
-        for (let i = 0; i < 100 && flat; i++) {
-            if (i != 0 && i % 55 == 0) {
-                flat = false;
-            }
-            document.write(`${i} ,`);
-        }
-
-        document.write("<br>in các số từ 0 đến 55 sử dụng break<br>");
-
-        for (let i = 0; i < 100; i++) {
-            if (i != 0 && i % 56 == 0) {
-                break;
-            }
-            document.write(`${i} ,`);
-        }
-
-        document.write("<br>Hiển thị các số chẵn dùng continue<br>");
-        for (let i = 0; i < 10; i++) {
-            if (i % 2 == 1) {
-                continue;
-            }
-            document.write(`${i} ,`);
-        }
+        //nesting loop
     </script>
 </body>
 
