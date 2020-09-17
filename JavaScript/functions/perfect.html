@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function isPerfectNumber(number) {
+            let total = 0;
+            for (let i = 1; i <= (number / 2); i++) {
+                if (number % i == 0) {
+                    total += i;
+                }
+            }
+            return total == number;
+        }
+
+
+        function printPerfectNumbers(start, end) {
+            let perfect = [];
+            for (let n = start; n <= end; n++) {
+                if (isPerfectNumber(n)) {
+                    perfect.push(n);
+                }
+            }
+            return perfect;
+        }
+
+        function inputNumber() {
+            let size = 0;
+            do {
+                size = +prompt('input number: ');
+            } while (!Number.isInteger(size))
+            return size;
+        }
+
+        function main() {
+            let start = inputNumber();
+            let end = inputNumber();
+            let perfect = printPerfectNumbers(start, end);
+            document.write(perfect.join('-'));
+        }
+
+        main();
+    </script>
+</body>
+
+</html>
